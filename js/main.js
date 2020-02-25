@@ -13,16 +13,17 @@ for (var i = 0; i < 16; i++) {                //questo ciclo mi consente di riem
 console.log(listaNumeriSfortunati);
 
 var numeroInserito = parseInt(prompt('inserisci un numero'));
-
+var numeriDatiDaUtente = [];
 
 for (var i = 0; i < 84; i++) {                 //questo ciclo for mi serve per permettere all'utente di inserire il numero massimo di numeri corretti (84)
     if (listaNumeriSfortunati.includes(numeroInserito)) {
         console.log('Mi dispiace il gioco è terminato, hai perso');
     }else {
         var numeroInserito = parseInt(prompt('inserisci un altro numero'));
+        numeriDatiDaUtente.push(numeroInserito);
     }
 }
-
+console.log('Il numero di volte che l\'utente ha inserito un numero giusto è: ' + numeriDatiDaUtente.length);
 
 
 
