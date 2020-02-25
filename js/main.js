@@ -15,11 +15,14 @@ console.log(listaNumeriSfortunati);
 var numeroInserito = parseInt(prompt('inserisci un numero'));
 var numeriDatiDaUtente = [];                   //questo array vuoto verrà riempito dai numeri inseriti dall'utente e mi serve per capire quanti ne ha inseriti grazie a length
 
-for (var i = 0; i < 84; i++) {                 //questo ciclo for mi serve per permettere all'utente di inserire il numero massimo di numeri corretti (84)
+
+while (numeriDatiDaUtente.length <= 84) {
     if (listaNumeriSfortunati.includes(numeroInserito)) {
         console.log('Mi dispiace il gioco è terminato, hai perso');
-    }else {
-        var numeroInserito = parseInt(prompt('inserisci un altro numero'));
+        break;
+    } else if (numeriDatiDaUtente.includes(numeroInserito)) {
+        var numeroInserito = parseInt(prompt('inserisci un numero diverso'));
+    } else {
         numeriDatiDaUtente.push(numeroInserito);
     }
 }
