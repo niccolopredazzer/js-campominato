@@ -4,7 +4,8 @@
 //la partita termina quando l'utente inserisce uno dei 16 numeri random oppure se li inserisce tutti corretti (tutti tranne quei 16)
 //in seguito stampiamo quanti numeri sono stati inseriti da un utente
 
-var listaNumeriSfortunati = [];               //creo il mio array vuoto che verrà riempito dai 16 numeri maledetti
+var listaNumeriSfortunati = [];                //creo il mio array vuoto che verrà riempito dai 16 numeri maledetti
+//var difficoltaInserita = parseInt(prompt('Scegliere livello di difficoltà tra 0, 1 oppure 2'));
 
 for (var i = 0; i < 16; i++) {                //questo ciclo mi consente di riempire l'array listaNumeriSfortunati con 16 numeri random da 1 a 100
     var numeroSfortunato = generaRandomMinMax(1, 100);
@@ -17,12 +18,13 @@ var numeriDatiDaUtente = [];                   //questo array vuoto verrà riemp
 
 
 while (numeriDatiDaUtente.length <= 84) {
+
     if (listaNumeriSfortunati.includes(numeroInserito)) {
         console.log('Mi dispiace il gioco è terminato, hai perso');
         break;
     } else if (numeriDatiDaUtente.includes(numeroInserito)) {
         var numeroInserito = parseInt(prompt('inserisci un numero diverso'));
-    } else {
+    }else {
         numeriDatiDaUtente.push(numeroInserito);
     }
 }
