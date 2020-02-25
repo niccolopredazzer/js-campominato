@@ -14,6 +14,7 @@ console.log(listaNumeriSfortunati);
 
 var numeroInserito = parseInt(prompt('inserisci un numero'));
 
+
 for (var i = 0; i < 84; i++) {                 //questo ciclo for mi serve per permettere all'utente di inserire il numero massimo di numeri corretti (84)
     if (listaNumeriSfortunati.includes(numeroInserito)) {
         console.log('Mi dispiace il gioco è terminato, hai perso');
@@ -24,14 +25,7 @@ for (var i = 0; i < 84; i++) {                 //questo ciclo for mi serve per p
 
 
 
-/*function trovaNumeroArray(numero) {
-    if (array.includes(numero)) {
-        return true;
-    }else {
-        return false;
-    }
-}
-*/
+
 function generaRandomMinMax(min, max) {
     var numeroRandom = Math.floor(Math.random() * (max - min + 1) ) + min;
     return numeroRandom;
