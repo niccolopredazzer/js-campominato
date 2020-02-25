@@ -26,7 +26,7 @@ for (var i = 0; i < 84; i++) {                 //questo ciclo for mi serve per p
 console.log('Il numero di volte che l\'utente ha inserito un numero giusto è: ' + numeriDatiDaUtente.length);
 
 
-
+//funzione che genera numeri random
 function generaRandomMinMax(min, max) {
     var numeroRandom = Math.floor(Math.random() * (max - min + 1) ) + min;
     return numeroRandom;
