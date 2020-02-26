@@ -9,7 +9,7 @@ var listaNumeriSfortunati = [];                //creo il mio array vuoto che ver
 
 for (var i = 0; i < 16; i++) {                //questo ciclo mi consente di riempire l'array listaNumeriSfortunati con 16 numeri random da 1 a 100
     var numeroSfortunato = generaRandomMinMax(1, 100);
-    if (!numeroSfortunato.includes(listaNumeriSfortunati)) {
+    if (!listaNumeriSfortunati.includes(numeroSfortunato)) {
         listaNumeriSfortunati.push(numeroSfortunato);
     }
 
