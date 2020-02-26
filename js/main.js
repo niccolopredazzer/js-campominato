@@ -18,13 +18,14 @@ var numeriDatiDaUtente = [];                   //questo array vuoto verrà riemp
 
 
 while (numeriDatiDaUtente.length <= 84) {
-
     if (listaNumeriSfortunati.includes(numeroInserito)) {
         console.log('Mi dispiace il gioco è terminato, hai perso');
         break;
     } else if (numeriDatiDaUtente.includes(numeroInserito)) {
         var numeroInserito = parseInt(prompt('inserisci un numero diverso'));
-    }else {
+    } else if (numeriDatiDaUtente.length == 84) {
+        console.log('hai vinto');
+    } else {
         numeriDatiDaUtente.push(numeroInserito);
     }
 }
