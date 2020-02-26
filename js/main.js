@@ -25,6 +25,7 @@ while (numeriDatiDaUtente.length <= 84) {
         var numeroInserito = parseInt(prompt('inserisci un numero diverso'));
     } else if (numeriDatiDaUtente.length == 84) {
         console.log('hai vinto');
+        break;
     } else {
         numeriDatiDaUtente.push(numeroInserito);
     }
